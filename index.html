@@ -4,39 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NIT Durgapur Alumni Network</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="header">
-        <div class="logo-section">
-            <div class="logo-placeholder"></div>
-            <div class="site-title">
-                <h1>NIT Durgapur</h1>
-                <p>Alumni Network</p>
-            </div>
-        </div>
-        <div class="header-links">
-            <a href="#">Home</a>
-            <a href="#">Privacy</a>
-            <a href="#" class="login-btn">Login/Signup</a>
-        </div>
-    </header>
 
-    <nav>
-        <ul>
-            <li><a href="#">ALUMNI NETWORK</a></li>
-            <li><a href="#">EVENTS</a></li>
-            <li><a href="#">SERVICES</a></li>
-            <li><a href="#">GIVING BACK</a></li>
-            <li><a href="#">PUBLICATIONS</a></li>
-            <li><a href="#">NIT CHRONICLE</a></li>
-            <li><a href="#">INT. RELATIONS</a></li>
-            <li><a href="#">NIT DURGAPUR HOME</a></li>
-            <li><a href="#">CONTACT US</a></li>
-        </ul>
-    </nav>
+    <!-- Header and Nav will be loaded here -->
+    <div id="main-header-placeholder"></div>
 
-    <div class="hero"></div>
+    <div class="hero">
+        <div class="hero-slider-wrapper">
+            <!-- Slide 1 -->
+            <div class="slide" id="slide-1"></div>
+            <!-- Slide 2 -->
+            <div class="slide" id="slide-2"></div>
+            <!-- Slide 3 -->
+            <div class="slide" id="slide-3"></div>
+        </div>
+        <!-- Navigation Dots -->
+        <div class="slider-dots">
+            <span class="dot active" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
+        </div>
+    </div>
+
 
     <div class="container">
         <div class="search-bar">
@@ -44,243 +35,49 @@
         </div>
 
         <div class="content-grid">
-            <div class="card">
+            <div class="card" id="events-card">
                 <div class="card-header">
                     <h2>EVENTS</h2>
-                    <a href="#" class="view-all">View All</a>
+                    <a href="events.html" class="view-all">View All</a>
                 </div>
-                <div class="card-content">
-                    <div class="event-item">
-                        <div class="event-date">
-                            <span class="month">OCT</span>
-                            <span class="day">03</span>
-                        </div>
-                        <div class="event-details">
-                            <h3>Mindful Yoga Webinar</h3>
-                            <p>Saturday, 03 October 2020 7:15 PM to 7:15 PM IST</p>
-                            <p style="margin-top: 5px; font-size: 12px;">Created by Jv Avadhanulu</p>
-                        </div>
-                    </div>
-                    <div class="event-item">
-                        <div class="event-date">
-                            <span class="month">SEP</span>
-                            <span class="day">28</span>
-                        </div>
-                        <div class="event-details">
-                            <h3>Alumni Meet 2020</h3>
-                            <p>Monday, 28 September 2020 6:00 PM to 8:00 PM IST</p>
-                        </div>
-                    </div>
-                </div>
+                <div class="card-content"></div>
             </div>
 
-            <div class="card">
+
+
+            <div class="card" id="memories-card">
                 <div class="card-header">
                     <h2>RECENT MEMORIES</h2>
-                    <a href="#" class="view-all">View All</a>
+                    <a href="memories.html" class="view-all">View All</a>
                 </div>
-                <div class="card-content">
-                    <div class="memory-item">
-                        <div class="memory-img"></div>
-                        <p class="memory-title">📷 NITD '19</p>
-                    </div>
-                    <div class="memory-item">
-                        <div class="memory-img"></div>
-                        <p class="memory-title">📷 Durgapur 2019 '19</p>
-                    </div>
-                </div>
+                <div class="card-content"></div>
             </div>
 
-            <div class="card">
+            
+
+            <div class="card" id="news-card">
                 <div class="card-header">
-                    <h2>ALUMNI IN NEWS</h2>
-                    <a href="#" class="view-all">View All</a>
+                    <h2>News</h2>
+                    <a href="news.html" class="view-all">View All</a>
                 </div>
-                <div class="card-content">
-                    <div class="news-item">
-                        <div class="news-logo"></div>
-                        <div class="news-content">
-                            <h3>Deepen Sinha • BTECH '06</h3>
-                            <p style="margin-bottom: 8px;">Founder and CEO at ATC Labs</p>
-                            <h3 style="margin-top: 10px;">ATC Labs secures a large order for its 24-band Perceptual Audio Processors from All India Radio (AIR)</h3>
-                            <p>Deepen Sinha, a Senior Scientist at the International Livestock Research Institute (ILRI), was recently awarded the Order of the Golden Ark for his efforts...</p>
-                        </div>
-                    </div>
-                    <div class="news-item">
-                        <div class="news-logo"></div>
-                        <div class="news-content">
-                            <h3>Amod Malviya • BTECH '02</h3>
-                            <p>Co Founder & Engineer at Udaan.com</p>
-                        </div>
-                    </div>
-                </div>
+                <div class="card-content"></div>
             </div>
 
-            <div class="card">
-                <div class="card-header">
-                    <h2>ANNOUNCEMENTS</h2>
-                    <a href="#" class="view-all">View All</a>
-                </div>
-                <div class="card-content">
-                    <div class="announcement-item">
-                        <div class="announcement-icon"></div>
-                        <div class="announcement-content">
-                            <h3>Office of Alumni Affairs - NIT Durgapur <span style="color: #999;">SENIOR PROJECT ASSISTANT</span></h3>
-                            <p style="margin-bottom: 5px;">at National Institute of Technology Durgapur, Durgapur</p>
-                            <p>JP Morgan is hiring for 2 interesting opportunities in validation and backtesting of counterparty credit risk models. It's a great chance to learn about stochastic calculus modelling, XVAs, stress testing and the IMM capital framework.</p>
-                            <p>Please refer to this link to apply for the role and for further details:</p>
-                            <a href="#" class="announcement-link">https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en...</a>
-                            <p style="margin-top: 8px;">Hiring Manager / Point of Contact: Tanmay Srivastava (tanmay.srivastava@jpmchase.com | <a href="#" class="announcement-link">https://www.linkedin.com/in/srivastava-tanmay</a>)</p>
-                        </div>
-                    </div>
-                    <div class="announcement-item">
-                        <div class="announcement-icon"></div>
-                        <div class="announcement-content">
-                            <h3>Office of Alumni Affairs - NIT Durgapur <span style="color: #999;">SENIOR PROJECT ASSISTANT</span></h3>
-                            <p style="margin-bottom: 5px;">at National Institute of Technology Durgapur, Durgapur</p>
-                            <p>Requirement from Bajaj Auto:</p>
-                            <p>Please note that we have a requirement for one position of a Graduate Trainee Engineer in IPR Team of Bajaj Auto.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <div class="card">
+            <div class="card" id="alumni-card">
                 <div class="card-header">
-                    <h2>TRENDING</h2>
-                    <a href="#" class="view-all">View All</a>
+                    <h2>Directory</h2>
+                    <a href="alumni.html" class="view-all">View All</a>
                 </div>
-                <div class="card-content">
-                    <p style="padding: 20px; text-align: center; color: #999;">Fetching tweets by NITDgp...</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-header">
-                    <h2>DISTINGUISHED ALUMNI</h2>
-                    <a href="#" class="view-all">View All</a>
-                </div>
-                <div class="card-content">
-                    <div class="alumni-item">
-                        <div class="alumni-photo"></div>
-                        <div class="alumni-info">
-                            <h3>Subir Kumar Banerjee</h3>
-                            <p>Emeritus and Founding Director, Institute of Rock Magnetism</p>
-                        </div>
-                    </div>
-                    <div class="alumni-item">
-                        <div class="alumni-photo"></div>
-                        <div class="alumni-info">
-                            <h3>Hirak Kumar Sen</h3>
-                            <p>Founder and CEO, H. K. Sen & Associates</p>
-                        </div>
-                    </div>
-                    <div class="alumni-item">
-                        <div class="alumni-photo"></div>
-                        <div class="alumni-info">
-                            <h3>Sarbari Gupta</h3>
-                            <p>President and CEO, Electrosoft</p>
-                        </div>
-                    </div>
-                    <div class="alumni-item">
-                        <div class="alumni-photo"></div>
-                        <div class="alumni-info">
-                            <h3>Anand Sen</h3>
-                            <p>Executive Director and Chief Operating Officer, Tata International Limited</p>
-                        </div>
-                    </div>
-                    <div class="alumni-item">
-                        <div class="alumni-photo"></div>
-                        <div class="alumni-info">
-                            <h3>Ajit Jain</h3>
-                            <p>President, Berkshire Hathaway</p>
-                        </div>
-                    </div>
-                    <div class="alumni-item">
-                        <div class="alumni-photo"></div>
-                        <div class="alumni-info">
-                            <h3>Sundar Pichai</h3>
-                            <p>Chief Executive Officer of Alphabet</p>
-                        </div>
-                    </div>
-                    <div class="alumni-item">
-                        <div class="alumni-photo"></div>
-                        <div class="alumni-info">
-                            <h3>Suresh Chandra Mishra</h3>
-                            <p>Former Chairman, Naval Research Board at DRDO</p>
-                        </div>
-                    </div>
-                </div>
+                <div class="card-content"></div>
             </div>
         </div>
-
-        <div class="video-section">
-            <div class="video-card">
-                <h3>VISIT NIT DURGAPUR</h3>
-                <div class="video-placeholder">▶</div>
-            </div>
-            <div class="video-card">
-                <h3>NIT DURGAPUR - THE AVENUE OF EXCELLENCE</h3>
-                <div class="video-placeholder">▶</div>
-            </div>
-        </div>
-
-        <div class="cta-section">
-            <div class="alumni-avatars">
-                <div class="avatar"></div>
-                <div class="avatar"></div>
-                <div class="avatar"></div>
-                <div class="avatar"></div>
-                <div class="avatar"></div>
-                <div class="avatar"></div>
-                <div class="avatar"></div>
-                <div class="avatar"></div>
-                <div class="avatar"></div>
-                <div class="avatar"></div>
-                <div class="avatar"></div>
-                <div class="avatar"></div>
-                <div class="avatar"></div>
-                <div class="avatar"></div>
-                <div class="avatar"></div>
-                <div class="avatar"></div>
-                <div class="avatar"></div>
-                <div class="avatar"></div>
-                <div class="avatar"></div>
-                <div class="avatar"></div>
-            </div>
-            <div class="cta-text">
-                <h2><span>Search</span> and <span>Network</span> with alums<br>across programs and batches</h2>
-                <a href="#" class="cta-btn">Login/Signup</a>
-                <p class="powered-by">Powered by AlmaConnect</p>
-            </div>
-        </div>
+        
     </div>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-left">
-                <h3>CONTACT US</h3>
-                <p>National Institute of Technology Durgapur<br>
-                Durgapur, India - 713209<br>
-                Phone: +91-343-2755000</p>
-                <div class="social-icons">
-                    <div class="social-icon">T</div>
-                    <div class="social-icon">F</div>
-                    <div class="social-icon">L</div>
-                    <div class="social-icon">Y</div>
-                    <div class="social-icon">I</div>
-                </div>
-            </div>
-            <div class="footer-right">
-                <p style="margin-bottom: 10px;">Powered by</p>
-                <div class="footer-logo"></div>
-            </div>
-        </div>
-        <div class="copyright">
-            Copyright ©2020 . All rights reserved.
-        </div>
-    </footer>
+    <!-- Footer will be loaded here -->
+    <footer id="main-footer-placeholder"></footer>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

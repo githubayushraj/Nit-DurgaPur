@@ -1,0 +1,525 @@
+/* --- General Body & Layout --- */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+/* --- Header --- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    height: 60px; /* Set the desired height */
+    width: auto;  /* Width will adjust automatically to maintain aspect ratio */
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-placeholder {
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.site-title h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #ff7722;
+}
+
+.site-title p {
+    margin: 0;
+    color: #555;
+}
+
+.header-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.login-btn {
+    background-color: #ff7722;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.login-btn:hover {
+    background-color: #0b5ed7;
+}
+
+/* --- Navigation Bar --- */
+nav {
+    background-color: #ff7722;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #495057;
+}
+
+
+.hero {
+    position: relative;
+    height: 350px;
+    width: 100%;
+    overflow: hidden; 
+    background: #e0e0e0; 
+}
+
+.hero-slider-wrapper {
+    display: flex;
+    height: 100%;
+    
+    /* This makes the container 3x the width of the screen, 
+       to hold all 3 slides in a row. */
+    width: 300%; 
+    
+    transition: transform 0.7s ease-in-out;
+}
+
+.slide {
+    width: 33.3333%;
+    height: 100%;
+    flex-shrink: 0;    
+    background-size: cover; 
+    background-position: center center; 
+    background-repeat: no-repeat;
+}
+
+#slide-1 {
+    background-image: url('../images/nitd home.jpg');
+}
+#slide-2 {
+    background-image: url('../images/nitd hostel.jpg');
+}
+#slide-3 {
+    background-image: url('../images/hero3.jpg');
+    background-size: contain;     
+    background-repeat: no-repeat; 
+    background-color: #ffffff;    
+}
+
+/* --- Navigation Dots Styling (No changes needed here) --- */
+.slider-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.dot:hover {
+    background-color: white;
+}
+
+.dot.active {
+    background-color: white;
+}
+
+
+/* --- Search Bar --- */
+.search-bar {
+    margin: 30px 0;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* --- Content Grid & Cards --- */
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.card-header h2 {
+    margin: 0;
+    font-size: 18px;
+    color: #000;
+}
+
+.card-header .view-all {
+    text-decoration: none;
+    font-size: 14px;
+    color: #ff7722;
+    font-weight: bold;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+
+
+#events-card {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+#events-card .card-content {
+    flex-grow: 1;
+    overflow-y: auto;
+    min-height: 0;
+    padding: 0;
+}
+
+#events-card .event-item {
+    padding: 15px 20px;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background-color 0.2s ease-in-out;
+}
+
+#events-card .event-item:last-child {
+    border-bottom: none;
+}
+
+#events-card .event-item:hover {
+    background-color: #f8f9fa; /* A very light grey background on hover */
+    cursor: pointer;
+}
+
+#events-card .event-item:hover .event-details h3 {
+    color: #ff7722; /* The primary blue color */
+}
+
+#events-card .event-date{
+   color : #ff7722; /* Changed from red to the primary blue */
+}
+
+
+#events-card .card-content::-webkit-scrollbar {
+    width: 6px; /* Make the scrollbar thinner */
+}
+
+#events-card .card-content::-webkit-scrollbar-track {
+    background: transparent; /* Make the track invisible */
+}
+
+#events-card .card-content::-webkit-scrollbar-thumb {
+    background: #ff7722; /* A subtle, light grey thumb */
+    border-radius: 10px;
+}
+
+#events-card .card-content::-webkit-scrollbar-thumb:hover {
+    background: #ff7722; /* A darker blue on hover */
+}
+
+/* Memories */
+.memory-item { text-align: center; flex: 1; }
+.card-content .memory-item:first-child { margin-right: 10px; }
+.card-content .memory-item:last-child { margin-left: 10px; }
+.card-content > div:has(.memory-item) { display: flex; justify-content: space-between;}
+.memory-img { width: 100%; height: 120px; background-color: #e9ecef; border-radius: 5px; margin-bottom: 10px; }
+.memory-title { font-weight: 500; }
+
+/* News */
+#news-card {
+    height: 600px; 
+    display: flex;
+    flex-direction: column;
+}
+
+#news-card .card-content {
+    flex-grow: 1;
+    overflow-y: auto;
+    min-height: 0;
+    padding: 0;
+}
+#news-card .news-item {
+    padding: 15px 20px;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background-color 0.2s ease-in-out;
+}
+
+#news-card .news-item:last-child {
+    border-bottom: none;
+}
+
+#news-card .news-item:hover {
+    background-color: #f8f9fa;
+    cursor: pointer;
+}
+#news-card .news-headline {
+    font-weight: 500; /* Make the headline slightly bolder */
+    color: #333;
+    margin-top: 8px;
+}
+
+#news-card .news-item:hover .news-content h3 {
+    color: #ff7722;
+}
+#news-card .card-content::-webkit-scrollbar {
+    width: 6px;
+}
+#news-card .card-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+#news-card .card-content::-webkit-scrollbar-thumb {
+    background: #ff7722;
+    border-radius: 10px;
+}
+#news-card .card-content::-webkit-scrollbar-thumb:hover {
+    background: #ff7722;
+}
+
+/* memories */
+#memories-card {
+    height: 600px; /* Match the height of the other cards */
+    display: flex;
+    flex-direction: column;
+}
+
+#memories-card .card-content {
+    flex-grow: 1;
+    overflow-y: auto;
+    min-height: 0;
+    padding: 0; /* Remove padding for edge-to-edge items */
+}
+
+/* --- Style for each individual memory item in the scrollable list --- */
+#memories-card .memory-item {
+    padding: 15px 20px;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background-color 0.2s ease-in-out;
+}
+
+#memories-card .memory-item:last-child {
+    border-bottom: none;
+}
+
+#memories-card .memory-item:hover {
+    background-color: #f8f9fa; /* Light grey hover effect */
+    cursor: pointer;
+}
+
+/* --- Styles for the image and title within the card --- */
+#memories-card .memory-img {
+    width: 100%;
+    height: 200px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #eee;
+}
+
+#memories-card .memory-title {
+    font-weight: 600; /* Bolder title */
+    text-align: center;
+    color: #333;
+}
+
+#memories-card .memory-item:hover .memory-title {
+    color: #ff7722; /* Title turns blue on hover */
+}
+
+/* --- ENHANCED Scrollbar for Memories Card --- */
+#memories-card .card-content::-webkit-scrollbar {
+    width: 6px;
+}
+#memories-card .card-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+#memories-card .card-content::-webkit-scrollbar-thumb {
+    background: #ff7722;
+    border-radius: 10px;
+}
+#memories-card .card-content::-webkit-scrollbar-thumb:hover {
+    background: #ff7722;
+}
+
+
+/* --- Styles for the scrollable Alumni Card on the homepage --- */
+#alumni-card {
+    height: 600px; /* Match the height of the other cards */
+    display: flex;
+    flex-direction: column;
+}
+
+#alumni-card .card-content {
+    flex-grow: 1;
+    overflow-y: auto;
+    min-height: 0;
+    padding: 0; /* Remove padding for edge-to-edge items */
+}
+
+/* --- Style for each individual alumni item in the scrollable list --- */
+#alumni-card .alumni-item {
+    display: flex; /* Align photo and text side-by-side */
+    align-items: center;
+    gap: 15px; /* Space between photo and text */
+    padding: 15px 20px;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background-color 0.2s ease-in-out;
+}
+
+#alumni-card .alumni-item:last-child {
+    border-bottom: none;
+}
+
+#alumni-card .alumni-item:hover {
+    background-color: #ff7722;
+    cursor: pointer;
+}
+
+/* --- Styles for the photo and info within the card --- */
+#alumni-card .alumni-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #e9ecef;
+    flex-shrink: 0; /* Prevents the photo from shrinking */
+}
+
+#alumni-card .alumni-info h3 {
+    margin: 0 0 3px 0;
+    font-size: 16px;
+}
+#alumni-card .alumni-info p {
+    margin: 0;
+    font-size: 14px;
+    color: #ff7722;
+}
+
+#alumni-card .alumni-item:hover .alumni-info h3 {
+    color: #ff7722; /* Name turns blue on hover */
+}
+
+/* --- ENHANCED Scrollbar for Alumni Card --- */
+#alumni-card .card-content::-webkit-scrollbar {
+    width: 6px;
+}
+#alumni-card .card-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+#alumni-card .card-content::-webkit-scrollbar-thumb {
+    background: #ff7722;
+    border-radius: 10px;
+}
+#alumni-card .card-content::-webkit-scrollbar-thumb:hover {
+    background: #ff7722;
+}
+
+/* Announcements */
+.announcement-item:not(:last-child) { margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 15px; }
+.announcement-item { display: flex; gap: 15px; }
+.announcement-icon { width: 30px; height: 30px; background-color: #e9ecef; border-radius: 5px; flex-shrink: 0; }
+.announcement-content h3 { font-size: 16px; margin: 0 0 5px 0; }
+.announcement-content p { font-size: 14px; color: #666; margin: 5px 0; line-height: 1.5; }
+.announcement-link { color: #0d6efd; text-decoration: none; word-break: break-all; }
+
+/* Distinguished Alumni */
+.alumni-item { display: flex; align-items: center; gap: 15px; }
+.alumni-item:not(:last-child) { margin-bottom: 15px; }
+.alumni-photo { width: 50px; height: 50px; background-color: #e9ecef; border-radius: 50%; flex-shrink: 0; }
+.alumni-info h3 { font-size: 16px; margin: 0 0 3px 0; }
+.alumni-info p { font-size: 14px; color: #666; margin: 0; }
+
+/* --- Video Section --- */
+.video-section { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin: 40px 0; }
+.video-card { background-color: #fff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px; }
+.video-card h3 { margin: 0 0 15px 0; }
+.video-placeholder { width: 100%; height: 200px; background-color: #000; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 50px; border-radius: 5px; cursor: pointer; }
+
+/* --- CTA Section --- */
+.cta-section { background-color: #004a99; color: #fff; padding: 40px; border-radius: 10px; text-align: center; margin: 40px 0; }
+.alumni-avatars { display: flex; justify-content: center; margin-bottom: 20px; }
+.avatar { width: 40px; height: 40px; border-radius: 50%; background-color: #ccc; border: 2px solid #fff; margin-left: -15px; }
+.avatar:first-child { margin-left: 0; }
+.cta-text h2 { font-size: 32px; margin: 0 0 20px 0; }
+.cta-text h2 span { color: #ffc107; }
+.cta-btn { background-color: #fff; color: #0d6efd; padding: 12px 25px; border-radius: 5px; text-decoration: none; font-weight: bold; display: inline-block; }
+.powered-by { font-size: 12px; margin-top: 15px; color: #ccc; }
+
+/* --- Footer --- */
+footer { background-color: #ff7722; color: #fff; padding: 40px 5%; }
+.footer-content { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
+.footer-left h3 { color: #fff; }
+.social-icons { display: flex; gap: 10px; margin-top: 20px; }
+.social-icon { width: 40px; height: 40px; background-color: #495057; color: #fff; display: flex; align-items: center; justify-content: center; border-radius: 50%; cursor: pointer; }
+.footer-logo { width: 150px; height: 40px; background-color: #6c757d; border-radius: 5px; }
+.copyright { text-align: center; padding-top: 20px; margin-top: 20px; border-top: 1px solid #fff; font-size: 14px; }
